@@ -15,7 +15,7 @@
 
 ### [Cryptography.java](./crypt/Cryptography.java)
 
-cryptフォルダ内のすべてのクラスの親．
+cryptフォルダ内のすべてのクラスの親となる抽象クラスCryptographyが格納されたファイル．
 
 ### [Caesar.java](./crypt/Caesar.java)
 
