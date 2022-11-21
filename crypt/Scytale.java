@@ -4,7 +4,7 @@ package crypt;
 public class Scytale extends Cryptography {
     private static String codeTmp = "None";
     // 暗号化
-    public static String encrypt(String code, String key){
+    public String encrypt(String code, String key){
         codeTmp = code; // 引数を格納
         int key_num = 0; // 一周当たりの文字数
         String output = ""; // 出力用
@@ -53,7 +53,7 @@ public class Scytale extends Cryptography {
     }
 
     // 復号化
-    public static String decrypt(String code, String key){
+    public String decrypt(String code, String key){
         codeTmp = code; // 引数を格納
         int key_num = 0; // 一周当たりの文字数
         String output = ""; // 出力用

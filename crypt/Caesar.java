@@ -4,7 +4,7 @@ package crypt;
 public class Caesar extends Cryptography{
     private static String codeTmp = "None"; // 暗号化用String型フィールド
     // 暗号化
-    public static String encrypt(String code, String key){
+    public String encrypt(String code, String key){
         codeTmp = code; // 引数を格納
         int key_num = 0; // シフトする数
         String output = ""; // 出力用
@@ -45,7 +45,7 @@ public class Caesar extends Cryptography{
     }
 
     // 復号化
-    public static String decrypt(String code, String key){
+    public String decrypt(String code, String key){
         codeTmp = code; // 引数を格納
         int key_num = 0; // シフトする数
         String output = ""; // 出力用

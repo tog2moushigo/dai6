@@ -8,14 +8,17 @@ class Main {
 
         System.out.println("code:" + code + " key:" + key);
 
-        String tmp = crypt.Caesar.encrypt(code, key);
+        
+        Caesar caesar = new Caesar();
+        String tmp = caesar.encrypt(code, key);
         System.out.println(code + " --caesar encrypt--> " + tmp);
-        String tmp1 = crypt.Caesar.decrypt(tmp, key);
+        String tmp1 = caesar.decrypt(tmp, key);
         System.out.println(tmp + " --caesar decrypt--> " + tmp1);
 
-        String tmp2 = crypt.Scytale.encrypt(code, key);
+        Scytale scytale = new Scytale();
+        String tmp2 = scytale.encrypt(code, key);
         System.out.println(code + " --scytale encrypt--> " + tmp2);
-        String tmp3 = crypt.Scytale.decrypt(tmp2, key);
+        String tmp3 = scytale.decrypt(tmp2, key);
         System.out.println(tmp2 + " --scytale decrypt--> " + tmp3);
     }
 }
