@@ -1,6 +1,6 @@
 package crypt;
 
-class Cryptography{
+abstract class Cryptography{
     // 暗号化
     public static String encrypt(String code, String key){
         return "None";
