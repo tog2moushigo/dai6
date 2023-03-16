@@ -4,7 +4,7 @@ import crypt.*;
 class Main {
     public static void main(String[] args){
         String key = "4"; // key
-        String code = "TOG II is so long."; // 暗号化・復号化したい文字列
+        String code = "Ellie is so cute."; // 暗号化・復号化したい文字列 TOG II is so long.
 
         System.out.println("code:" + code + " key:" + key);
 
@@ -20,5 +20,9 @@ class Main {
         System.out.println(code + " --scytale encrypt--> " + tmp2);
         String tmp3 = scytale.decrypt(tmp2, key);
         System.out.println(tmp2 + " --scytale decrypt--> " + tmp3);
+
+        /* Open Window */
+        GUI windGui = new GUI();
+        windGui.setVisible(true);
     }
 }
