@@ -6,11 +6,12 @@ public class GUI extends JFrame {
     private JLabel labInp, labKey, labRes, labInfo;
     private JTextField texInput, texKey, texResult;
     private JRadioButton RButtonEnc, RButtonDec;
+    private ButtonGroup groupCip;
     private JComboBox dropCiphers;
     private JPanel panelInp, panelKey, panelMenu, panelRadio, panelResult, panelInfo;
 
     // dropdown menu
-    String[] ciphers = {"Caesar", "Scytale"};
+    String ciphers[] = {"Caesar", "Scytale"};
 
     public GUI(){
         setTitle("Let's make ciphers!");
@@ -42,8 +43,11 @@ public class GUI extends JFrame {
         panelMenu.add(dropCiphers, BorderLayout.CENTER);
 
         /* radio button */
-        RButtonEnc = new JRadioButton("Encrypt");
+        RButtonEnc = new JRadioButton("Encrypt", true); // default selected button
         RButtonDec = new JRadioButton("Decrypt");
+        groupCip = new ButtonGroup();
+        groupCip.add(RButtonEnc);
+        groupCip.add(RButtonDec);
         panelRadio = new JPanel();
         panelRadio.setLayout(new GridLayout(1,2));
         panelRadio.add(RButtonEnc);
